@@ -1,7 +1,7 @@
 " File: mru.vim
 " Author: Yegappan Lakshmanan (yegappan AT yahoo DOT com)
 " Version: 3.9.2
-" Last Modified: May 15, 2020
+" Last Modified: June 4, 2020
 " Copyright: Copyright (C) 2003-2020 Yegappan Lakshmanan
 " License:   Permission is hereby granted to use and distribute this code,
 "            with or without modifications, provided that this copyright
@@ -745,7 +745,7 @@ function! s:MRU_add_files_to_menu(prefix, file_list)
 
         " Truncate the directory name if it is long
         let dir_name = fnamemodify(fname, ':h')
-	if v:version >= 8.0 || has("patch-7.4.1730")
+	if v:version >= 800 || has("patch-7.4.1730")
 	    let len = strchars(dir_name)
 	    " Shorten long file names by adding only few characters from
 	    " the beginning and end.
